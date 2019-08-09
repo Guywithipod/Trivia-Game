@@ -42,8 +42,14 @@ const questions = [
 let currentQuestion = 0;
 let score = 0;
 let wrong = 0;
-let timer = 100;
+let timer = 101;
 let intervalId;
+
+const startButton = document.getElementById("start-button");
+
+const container = document.getElementById("container");
+
+const container2 = document.getElementById("container2");
 
 function run() {
     clearInterval(intervalId);
@@ -60,21 +66,24 @@ function decrement() {
 
     }
 }
-//here is the function to clear the quesions and tally up the correct answers
+// This is the function that is ran once our timer is up and reveals the total correct answers, incorrect answers, and unanswered.
 function stop() {
+
     clearInterval(intervalId);
 
+    container.innerHTML = "";
+
+    container2.innerHTML = "";
+
+    container2.innerHTML = '<h1>' + "Times up!" + "</h1>";
+
 }
-
-const startButton = document.getElementById("start-button")
-
-const container = document.getElementById("container");
 
 // when we click the start button, the function deletes the button and creates our new page.
 
 startButton.addEventListener("click", function () {
 
-    run()
+    run();
 
     event.preventDefault();
 
@@ -83,8 +92,9 @@ startButton.addEventListener("click", function () {
 
     //here is my main header
     container.innerHTML = '<h1>' + "Totally Trivial Trivia!" + "</h1>";
-    // here is where question one is droped 1 from our questions array
-    const question1 = document.getElementById("questions")
+    // here is where question one is grabbed from our questions array
+
+    const question1 = document.getElementById("questions");
 
     question1.innerHTML = questions[0].question;
 
@@ -196,11 +206,5 @@ startButton.addEventListener("click", function () {
 
 //each question should only allow one answer to be clicked
 
-// This is the function that is ran once our timer is up and switches the css to reveal the total correct answers, incorrect answers, and unanswered.
-
-setTimeout(timeUp, 1000 * 15);
-
-function timeUp() {
 
 
-};
