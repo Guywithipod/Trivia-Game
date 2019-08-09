@@ -19,6 +19,33 @@ h1 {
     margin-right: 5%;
 }
 
+#timer {
+    text-align: center;
+    background-color: aqua;
+    color:rgb(56, 37, 11);
+    font-size: 48px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+#start-button {
+    text-align: center;
+    background-color: aqua;
+    color:rgb(56, 37, 11);
+    font-size: 48px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+#container{
+    text-align: center;
+}
+
 #buttons,#question2-buttons, #question3-buttons, #question4-buttons, #question5-buttons, #question6-buttons {
     text-align: center;
     background-color: aqua;

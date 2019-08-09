@@ -1,7 +1,3 @@
-// here is our start button that begins the timer and changes the css to look like our trivia game
-let currentQuestion = 0;
-let score = 0;
-let wrong = 0;
 
 // here we have an array that is built for our questions and all thier relevant information.
 const questions = [
@@ -42,14 +38,34 @@ const questions = [
         explination: ":)"
     },
 ]
+// here is our start button that begins the timer and changes the css to look like our trivia game
+let currentQuestion = 0;
+let score = 0;
+let wrong = 0;
+let timer = 100;
+let intervalId;
 
-// when we click the start button, the function deletes the button and creates our new page.
+function run() {
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
+  }
+
+function decrement() {
+    timer--;
+
+    document.getElementById("timer").innerHTML =  "Time left:" + timer;
+
+}
 
 const startButton = document.getElementById("start-button")
 
 const container = document.getElementById("container");
 
+// when we click the start button, the function deletes the button and creates our new page.
+
 startButton.addEventListener("click", function () {
+
+    run()
 
     event.preventDefault();
 
@@ -70,13 +86,13 @@ startButton.addEventListener("click", function () {
     for (let i = 0; i < questions[0].choices.length; i++) {
         //we create a button for each choice.
         const questionOneButtons = document.createElement("button");
-    
+
         questionOneButtons.classList.add("choices");
-       
+
         questionOneButtons.setAttribute("data-name", questions[0].choices[i]);
 
         questionOneButtons.innerHTML = questions[0].choices[i];
- 
+
         document.getElementById("buttons").append(questionOneButtons);
 
     }
@@ -86,15 +102,15 @@ startButton.addEventListener("click", function () {
     question2.innerHTML = questions[1].question;
 
     for (let i = 0; i < questions[1].choices.length; i++) {
- 
+
         const questionTwoButtons = document.createElement("button");
-    
+
         questionTwoButtons.classList.add("choices2");
-       
+
         questionTwoButtons.setAttribute("data-name", questions[1].choices[i]);
 
         questionTwoButtons.innerHTML = questions[1].choices[i];
- 
+
         document.getElementById("question2-buttons").append(questionTwoButtons);
 
     }
@@ -104,15 +120,15 @@ startButton.addEventListener("click", function () {
     question3.innerHTML = questions[2].question;
 
     for (let i = 0; i < questions[2].choices.length; i++) {
- 
+
         const questionThreeButtons = document.createElement("button");
-    
+
         questionThreeButtons.classList.add("choices3");
-       
+
         questionThreeButtons.setAttribute("data-name", questions[2].choices[i]);
 
         questionThreeButtons.innerHTML = questions[2].choices[i];
- 
+
         document.getElementById("question3-buttons").append(questionThreeButtons);
 
     }
@@ -121,15 +137,15 @@ startButton.addEventListener("click", function () {
     question4.innerHTML = questions[3].question;
 
     for (let i = 0; i < questions[3].choices.length; i++) {
- 
+
         const questionfourButtons = document.createElement("button");
-    
+
         questionfourButtons.classList.add("choices4");
-       
+
         questionfourButtons.setAttribute("data-name", questions[3].choices[i]);
 
         questionfourButtons.innerHTML = questions[3].choices[i];
- 
+
         document.getElementById("question4-buttons").append(questionfourButtons);
 
     }
@@ -138,15 +154,15 @@ startButton.addEventListener("click", function () {
     question5.innerHTML = questions[4].question;
 
     for (let i = 0; i < questions[4].choices.length; i++) {
- 
+
         const questionFourButtons = document.createElement("button");
-    
+
         questionFourButtons.classList.add("choices5");
-       
+
         questionFourButtons.setAttribute("data-name", questions[4].choices[i]);
 
         questionFourButtons.innerHTML = questions[4].choices[i];
- 
+
         document.getElementById("question5-buttons").append(questionFourButtons);
 
     }
@@ -155,24 +171,19 @@ startButton.addEventListener("click", function () {
     question6.innerHTML = questions[5].question;
 
     for (let i = 0; i < questions[5].choices.length; i++) {
- 
+
         const questionSixButtons = document.createElement("button");
-    
+
         questionSixButtons.classList.add("choices6");
-       
+
         questionSixButtons.setAttribute("data-name", questions[5].choices[i]);
 
         questionSixButtons.innerHTML = questions[5].choices[i];
- 
+
         document.getElementById("question6-buttons").append(questionSixButtons);
 
     }
 });
-
-
-    
-
-
 
 //each question should only allow one answer to be clicked
 
