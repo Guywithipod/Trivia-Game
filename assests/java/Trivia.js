@@ -48,12 +48,21 @@ let intervalId;
 function run() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
-  }
+}
 
 function decrement() {
     timer--;
 
-    document.getElementById("timer").innerHTML =  "Time left:" + timer;
+    document.getElementById("timer").innerHTML = "Time left:" + timer;
+
+    if (timer === 0) {
+        stop();
+
+    }
+}
+//here is the function to clear the quesions and tally up the correct answers
+function stop() {
+    clearInterval(intervalId);
 
 }
 
