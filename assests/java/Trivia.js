@@ -64,9 +64,10 @@ function decrement() {
     if (timer === 0) {
         stop();
 
+
     }
 }
-// This is the function that is ran once our timer is up and reveals the total correct answers, incorrect answers, and unanswered.
+// This is the function that is ran once our timer is up and clears the questions page
 function stop() {
 
     clearInterval(intervalId);
@@ -76,6 +77,11 @@ function stop() {
     container2.innerHTML = "";
 
     container2.innerHTML = '<h1>' + "Times up!" + "</h1>";
+
+    //here I would like to reaveal the correct ansswers and the explinations.
+
+    //here is where the tally of correct answers and wrong answers should be
+
 
 }
 
@@ -131,6 +137,10 @@ startButton.addEventListener("click", function () {
         questionTwoButtons.innerHTML = questions[1].choices[i];
 
         document.getElementById("question2-buttons").append(questionTwoButtons);
+
+        //here is where the code that allows only one button to be pressed at a time should go. 
+
+        //here is where i should have an if statement saying if the correct one was chosen then the tally goes up or down.
 
     }
 
