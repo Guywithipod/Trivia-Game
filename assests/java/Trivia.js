@@ -80,9 +80,93 @@ startButton.addEventListener("click", function () {
         document.getElementById("buttons").append(questionOneButtons);
 
     }
-    
 
-  
+    const question2 = document.getElementById("question2")
+
+    question2.innerHTML = questions[1].question;
+
+    for (let i = 0; i < questions[1].choices.length; i++) {
+ 
+        const questionTwoButtons = document.createElement("button");
+    
+        questionTwoButtons.classList.add("choices2");
+       
+        questionTwoButtons.setAttribute("data-name", questions[1].choices[i]);
+
+        questionTwoButtons.innerHTML = questions[1].choices[i];
+ 
+        document.getElementById("question2-buttons").append(questionTwoButtons);
+
+    }
+
+    const question3 = document.getElementById("question3")
+
+    question3.innerHTML = questions[2].question;
+
+    for (let i = 0; i < questions[2].choices.length; i++) {
+ 
+        const questionThreeButtons = document.createElement("button");
+    
+        questionThreeButtons.classList.add("choices3");
+       
+        questionThreeButtons.setAttribute("data-name", questions[2].choices[i]);
+
+        questionThreeButtons.innerHTML = questions[2].choices[i];
+ 
+        document.getElementById("question3-buttons").append(questionThreeButtons);
+
+    }
+    const question4 = document.getElementById("question4")
+
+    question4.innerHTML = questions[3].question;
+
+    for (let i = 0; i < questions[3].choices.length; i++) {
+ 
+        const questionfourButtons = document.createElement("button");
+    
+        questionfourButtons.classList.add("choices4");
+       
+        questionfourButtons.setAttribute("data-name", questions[3].choices[i]);
+
+        questionfourButtons.innerHTML = questions[3].choices[i];
+ 
+        document.getElementById("question4-buttons").append(questionfourButtons);
+
+    }
+    const question5 = document.getElementById("question5")
+
+    question5.innerHTML = questions[4].question;
+
+    for (let i = 0; i < questions[4].choices.length; i++) {
+ 
+        const questionFourButtons = document.createElement("button");
+    
+        questionFourButtons.classList.add("choices5");
+       
+        questionFourButtons.setAttribute("data-name", questions[4].choices[i]);
+
+        questionFourButtons.innerHTML = questions[4].choices[i];
+ 
+        document.getElementById("question5-buttons").append(questionFourButtons);
+
+    }
+    const question6 = document.getElementById("question6")
+
+    question6.innerHTML = questions[5].question;
+
+    for (let i = 0; i < questions[5].choices.length; i++) {
+ 
+        const questionSixButtons = document.createElement("button");
+    
+        questionSixButtons.classList.add("choices6");
+       
+        questionSixButtons.setAttribute("data-name", questions[5].choices[i]);
+
+        questionSixButtons.innerHTML = questions[5].choices[i];
+ 
+        document.getElementById("question6-buttons").append(questionSixButtons);
+
+    }
 });
 
 

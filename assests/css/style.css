@@ -8,7 +8,7 @@ h1 {
     margin-left: 5%;
     margin-right: 5%;
 }
-#questions {
+#questions, #question2, #question3, #question4, #question5, #question6 {
     text-align: center;
     background-color: aqua;
     color: blue;
@@ -19,7 +19,7 @@ h1 {
     margin-right: 5%;
 }
 
-#buttons {
+#buttons,#question2-buttons, #question3-buttons, #question4-buttons, #question5-buttons, #question6-buttons {
     text-align: center;
     background-color: aqua;
     color: blue;
